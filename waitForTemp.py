@@ -26,10 +26,16 @@ class Stack:
         return self.items
 
 
-input = input()
+def dailyTemperatures(temperatures):
+    n = len(temperatures)
+    stack = []
+    res = [0] * n
+    for i in range(n):
+        while stack and temperatures[i] > temperatures[stack[-1]]:
+            j = stack.pop()
+            res[j] = i - j
+        stack.append(i)
+    return res
 
-stack = Stack()
 
-stack.push(input)
-
-print(stack.reverse())
+print(dailyTemperatures([73, 74, 75, 71, 69, 72, 76, 73]))

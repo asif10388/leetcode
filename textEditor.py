@@ -20,16 +20,17 @@ class Stack:
     def deleteChar(self):
         if not self.isEmpty():
             self.items.pop()
-        return "".join(self.items)
+        return " ".join(self.items)
 
 
 stack = Stack()
 
-userInput = input()
+userInput = input().split()
 
-for letter in userInput:
-    stack.push(letter)
+for word in userInput:
+    stack.push(word)
 
+print(stack.items)
 flag = True
 
 

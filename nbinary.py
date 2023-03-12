@@ -35,8 +35,8 @@ queue = Queue()
 
 def nToBinary(n, queue):
     for i in range(n + 1):
-        queue.enqueue(bin(i).replace("b", ""))
+        queue.enqueue(bin(i).replace("0b", ""))
     return "\n\n".join([*queue.printQueue()])
 
 
-print(nToBinary(1, queue))
+print(nToBinary(3, queue))

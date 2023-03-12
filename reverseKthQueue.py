@@ -52,7 +52,7 @@ queue.enqueue(90)
 
 print(queue.peek())
 
-print(queue.dequeue())
+# print(queue.dequeue())
 
 print(queue.printQueue())
 

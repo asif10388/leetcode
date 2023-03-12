@@ -24,13 +24,15 @@ class Stack:
 stackA = Stack()
 stackB = Stack()
 
-stackA.push(10)
-stackA.push(25)
-stackA.push(70)
+stackA.push(1)
+stackA.push(5)
+stackA.push(11)
+stackA.push(4)
 
-stackB.push(10)
-stackB.push(20)
-stackB.push(30)
+stackB.push(4)
+stackB.push(32)
+stackB.push(1)
+stackB.push(-1)
 
 
 def balanceSum(stackA, stackB):

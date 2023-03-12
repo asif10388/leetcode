@@ -32,15 +32,23 @@ stack.push(99)
 stack.push(22)
 stack.push(44)
 
+print(stack.printStack())
+
 
 def keepLargestOnTop(stack):
     largest = max(stack.items)
+    helpingStack = Stack()
 
-    for i in range(len(stack.items) - 1):
-        if stack.items[i] == largest:
-            stack.items.pop(i)
-            stack.items.append(largest)
-            break
+    while not stack.isEmpty():
+        popped = stack.pop()
+        if popped < largest:
+            helpingStack.push(popped)
+
+    while not helpingStack.isEmpty():
+        stack.push(helpingStack.pop())
+
+    stack.push(largest)
+
     return stack.items
 
 
