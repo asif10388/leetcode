@@ -39,4 +39,4 @@ def nToBinary(n, queue):
     return "\n\n".join([*queue.printQueue()])
 
 
-print(nToBinary(3, queue))
+print(nToBinary(5, queue))
